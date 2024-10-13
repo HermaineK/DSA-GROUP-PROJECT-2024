@@ -2,8 +2,10 @@ Data Structures and Algorithmns Project
 
 Project Name: Phonebook Application
 
+
 Project Overview
 -This project is a simple Phonebook Application built using Java Swing for the graphical user interface (GUI) and linked list for data storage. It allows users to manage a list of contacts, including adding, updating, deleting, and searching for contacts. The contacts are displayed in a table, and the application provides options for both user interaction and data management.
+
 
 Features
 
@@ -23,6 +25,7 @@ Features
 
 -Preloaded Data: The application starts with some predefined contacts for demonstration purposes.
 
+
 Code Structure
 
 -PhonebookApp.java: The main class for the GUI logic and event handling.
@@ -35,11 +38,13 @@ Code Structure
 
 -Node.java:Represents a node in the linked list.
 
+
 Algorithms
 
 -Linear Search:Used for searching contacts by name.
 
 -Merge Sort:Used to sort contacts alphabetically by name in the linked list.
+
 
 Functions
 
@@ -57,6 +62,7 @@ Functions
 
 -refreshContactTable(): Updates the displayed contact list in the GUI by retrieving and sorting contacts.
 
+
 Technologies Used
 
 -Java: The programming language used for developing the application.
@@ -68,6 +74,7 @@ Technologies Used
 -JDialog: Used to add and update contacts through dialog boxes.
 
 -Linked List: Uses singly linked list for storing and managing contacts.
+
 
 Contributors
 
