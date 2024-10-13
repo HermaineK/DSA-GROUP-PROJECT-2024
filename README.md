@@ -3,77 +3,196 @@ Data Structures and Algorithmns Project
 Project Name: Phonebook Application
 
 Project Overview
--This project is a simple Phonebook Application built using Java Swing for the graphical user interface (GUI) and linked list for data storage. It allows users to manage a list of contacts, including adding, updating, deleting, and searching for contacts. The contacts are displayed in a table, and the application provides options for both user interaction and data management.
+
+The Phonebook Application is a Java-based desktop application built using Swing that allows users to manage their contacts. It supports features such as adding, updating, deleting, searching, and sorting contacts, including advanced options like handling favorite contacts, organizing contacts into groups, and switching between light and dark modes. The application is designed with a graphical user interface (GUI) and provides an intuitive user experience for managing a digital phonebook.
 
 
 Features
+1. Add Contact
 
--Add Contact: Allows users to add a new contact by specifying the name and phone number.
+-Allows the user to add a new contact by providing the contact’s name, phone number, favorite status, and group.
 
--Search Contact: Enables users to search for a specific contact by name.
+-If marked as a favorite, the contact is displayed with a checkmark (✔).
 
--Update Contact: Provides an option to update the details of a selected contact (name and phone number).
+2. Update Contact
 
--Delete Contact: Allows users to delete a contact from the list.
+-The user can select a contact from the table and update its details such as name, phone number, favorite status, and group.
 
--Display All Contacts: Lists all the contacts in the phonebook in a table view.
+3. Delete Contact
+
+-The user can select a contact from the table and delete it from the phonebook.
+4. Search Contacts
+
+-Search contacts by name or group.
+
+-Displays all contacts with the same name if duplicates exist.
+
+5. Display All Contacts
+
+-Shows all contacts in the phonebook in a table format with columns for name, phone number, favorite status, and group.
+
+6. Favorite Contacts
+
+-Displays favorite contacts when the "Show Favorites" button is clicked.
+
+-Favorite contacts are marked with a checkmark (✔).
+
+7. Group Contacts
+
+-Contacts can be assigned to a group such as “Family,” “Work,” etc.
+
+-The group name is displayed along with the contact’s details.
+
+8. Light and Dark Mode
+
+-Users can toggle between light and dark mode for the application.
+
+-Dark mode turns the entire JFrame dark, and light mode returns it to the default color scheme.
+
+9. Sorting
+
+-Contacts can be sorted by:
+
+-First 3 letters of their name.
+
+-First 5 digits of their phone number.
+
+10. Multiple Contact Handling
+
+-If multiple contacts share the same name, all are displayed when searched.
 
 
 Code Structure
 
--PhonebookApp.java: The main class for the GUI logic and event handling.
+The project is divided into the following classes, each representing different components of the phonebook application:
 
--Phonebook.java: Handles the logic for managing contacts (add, update, delete, search).
+1. Contact Class
 
--Contact.java: Defines the Contact class, which holds the contact details such as name and phone number.
+-Represents a contact in the phonebook.
 
--LinkedList.java:Custom implementation of a singly linked list for managing contact data.
+-Contains fields for the name, phone number, favorite status, and group.
 
--Node.java:Represents a node in the linked list.
+-Provides getter and setter methods for the fields.
+
+2. Node Class
+
+-Represents a node in the linked list.
+
+-Contains a Contact object and a reference to the next node.
+
+3. LinkedList Class
+
+Implements a linked list to manage contacts.
+
+-Provides methods to add, delete, update, and sort contacts.
+
+-Includes an insertion sort algorithm to sort contacts by name or phone number.
+
+4. Phonebook Class
+
+-Acts as the main data manager for contacts.
+
+-Utilizes the LinkedList to store and manipulate contacts.
+
+-Provides methods to add, delete, search, and retrieve contacts, as well as to manage favorite and grouped contacts.
+
+5. PhonebookApp Class
+
+-The main GUI class built with Java Swing.
+
+-Manages the display and interaction of the phonebook on a JFrame.
+
+-Handles user actions such as adding, updating, deleting, and searching contacts.
+
+-Switches between light and dark mode.
+
+-Uses a JTable to display contacts in a tabular format.
 
 
-Algorithms
+Algorithms and Functions
 
--Linear Search:Used for searching contacts by name.
+1. Insertion Sort (for Sorting Contacts)
 
--Merge Sort:Used to sort contacts alphabetically by name in the linked list.
+-Sorts the contacts in the linked list based on either the first 3 letters of the contact’s name or the first 5 digits of the contact’s phone number.
 
-Functions
+-The algorithm iterates through the list, inserting each node into the correct position in a new sorted list.
 
-- addContact(String name, String phone): Adds a new contact to the linked list.
+2. Search Contacts
 
--searchContact(String name): Searches for a contact by name using linear search.
+-The search function checks for multiple contacts with the same name and returns all matching entries.
 
--deleteContact(String name): Deletes a contact from the linked list.
+3. Dark and Light Mode Toggle
 
--updateContact(String oldName, String newName, String newPhone): Updates an existing contact.
+-Dynamically changes the background colors of the entire JFrame and its components.
+________________________________________
+Technical Stack
 
--sortContacts(): Sorts the contacts in alphabetical order using insertion sort.
+1. Language
 
--refreshContactTable(): Updates the displayed contact list in the GUI by retrieving and sorting contacts.
+-Java
+
+2. GUI Framework
+
+-Java Swing
+
+-Used for creating the graphical user interface, including windows, buttons, tables, and dialogs.
+
+3. Data Structures
+
+-Linked List:
+
+-Used to store and manage the contacts dynamically.
+
+-Supports easy insertion, deletion, and traversal of contacts.
+
+-ArrayList
+
+-Used when returning the list of contacts (e.g., when retrieving all contacts or searching for contacts).
+
+4. Design Patterns
+
+-Model-View-Controller (MVC): The code loosely follows the MVC pattern where:
+
+-The Contact class represents the Model.
+
+-The PhonebookApp class acts as the View and Controller, handling user input and displaying data.
+
+-The Phonebook and LinkedList classes function as the data manager or backend logic.
 
 
-Technologies Used
+Usage Instructions
 
--Java: The programming language used for developing the application.
+1. Running the Application
 
-- Swing: A Java's GUI toolkit for building the graphical interface.
+-Clone or download the repository.
 
--JTable: Used to displaying contacts in a tabular format.
+-Compile the Java files.
 
--JDialog: Used to add and update contacts through dialog boxes.
+-Run the PhonebookApp class.
 
--Linked List: Uses singly linked list for storing and managing contacts.
+2. Using the Features
+
+-Add contacts using the "Add Contact" button.
+
+-Search contacts by entering a name in the search bar and clicking "Search."
+
+-Update or delete a contact by selecting a contact in the table and clicking the respective buttons.
+
+-Toggle between dark and light mode using the toggle button.
+
+-View favorite contacts by clicking "Show Favorites."
+
+-View all contacts and grouped contacts using the display buttons.
 
 
-Contributors
+CONTRIBUTORS
 
--Leslie DT Langendorf
+Leslie DT  Langendorf
 
--Denzel MM Simataa
+Denzel MM Simataa
 
--Kabo N Kabuna
+Kabo N Kabuna
 
--Penny Kashidulika
+Penny Kashidulika
 
--Hermaine Kharugas
+Hemaine Kharugas
